@@ -71,6 +71,8 @@ const firstTodo = useZen(todosZen, (s) => s[0]);
 
 Type docs: https://paka.dev/npm/@sidww/zen
 
+## Mentions
+Strongly inspired by some of my favourite state libraries [Jotai](https://jotai.org) and [Valtio](https://valtio.pmnd.rs)
 ## License
 
 MIT &copy; [sidwebworks](https://github.com/sponsors/sidwebworks)
