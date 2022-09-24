@@ -1,8 +1,13 @@
 # Zen
 
+
 [![npm version](https://badgen.net/npm/v/@sww/zen)](https://npm.im/@sww/zen) [![npm downloads](https://badgen.net/npm/dm/@sidwebworks/get-packages)](https://npm.im/@sidwebworks/get-packages)
 
 > Dead simple state-management
+
+- 📦 Tiny (less than 1kb)
+- 🔩 Typesafe APIs
+- ⚡️ React and Selectors support
 
 ## Install
 
