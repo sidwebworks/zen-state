@@ -11,11 +11,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "exports": {
-    ".": "./dist/index.mjs",
-    "./react": "./dist/react.mjs"
+    ".": {
+      "import": "./dist/index.mjs"
+    },
+    "./react": {
+      "import": "./dist/react.mjs"
+    }
   },
   "types": "./dist/index.d.ts",
   "scripts": {
