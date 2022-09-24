@@ -1,7 +1,7 @@
 # Zen
 
 
-[![npm version](https://badgen.net/npm/v/@sww/zen)](https://npm.im/@sww/zen) [![npm downloads](https://badgen.net/npm/dm/@sidwebworks/get-packages)](https://npm.im/@sidwebworks/get-packages)
+[![npm version](https://badgen.net/npm/v/@sidww/zen)](https://npm.im/@sidww/zen) [![npm downloads](https://badgen.net/npm/dm/@sidwebworks/get-packages)](https://npm.im/@sidwebworks/get-packages)
 
 > Dead simple state-management
 
@@ -12,13 +12,13 @@
 ## Install
 
 ```bash
-npm i @sww/zen
+npm i @sidww/zen
 ```
 
 ## Usage
 
 ```ts
-import { zen } from "@sww/zen"
+import { zen } from "@sidww/zen"
 
 const todos = zen([{ id: 1, completed: false, title: "Idk man" }])
 ```
@@ -56,7 +56,7 @@ todos.subscribe((state) => {
 ### Usage with React
 
 ```ts
-import { useZen } from "@sww/zen/react"
+import { useZen } from "@sidww/zen/react"
 
 const todos = useZen(todosZen);
 ```
@@ -64,12 +64,12 @@ const todos = useZen(todosZen);
 #### Selector support
 
 ```ts
-import { useZen } from "@sww/zen/react"
+import { useZen } from "@sidww/zen/react"
 
 const firstTodo = useZen(todosZen, (s) => s[0]);
 ```
 
-Type docs: https://paka.dev/npm/@sww/zen
+Type docs: https://paka.dev/npm/@sidww/zen
 
 ## License
 
