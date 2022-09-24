@@ -12,11 +12,18 @@
     "dist"
   ],
   "exports": {
+    "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.mjs"
+      "types": "./index.d.ts",
+      "module": "./index.mjs",
+      "import": "./index.mjs",
+      "default": "./index.mjs"
     },
     "./react": {
-      "import": "./dist/react.mjs"
+      "types": "./react.d.ts",
+      "module": "./react.mjs",
+      "import": "./react.mjs",
+      "default": "./react.mjs"
     }
   },
   "types": "./dist/index.d.ts",

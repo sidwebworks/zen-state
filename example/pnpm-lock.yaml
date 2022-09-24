@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sidww/zen': ^1.0.0
+  '@sidww/zen': ^1.0.1
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
   '@vitejs/plugin-react': ^2.1.0
@@ -11,7 +11,7 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
-  '@sidww/zen': 1.0.0_iapumuv4e6jcjznwuxpf4tt22e
+  '@sidww/zen': 1.0.1_iapumuv4e6jcjznwuxpf4tt22e
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -347,8 +347,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@sidww/zen/1.0.0_iapumuv4e6jcjznwuxpf4tt22e:
-    resolution: {integrity: sha512-b3Rs/SVe9vNnMZXHEk9Kp9BBYYkCDJVIaSwwap3/o/ARhd6lFTizc5Qyf8/miNyuof4Qu90bBp3Jc2A6ANLgAg==}
+  /@sidww/zen/1.0.1_iapumuv4e6jcjznwuxpf4tt22e:
+    resolution: {integrity: sha512-ecNQi8zEgDwFvgWLp6t1EdV/G1KGO2+J4bkXLr3KOq789IpV0D68G/0fUzDEB6s/9oTQPTkymucaVmcqg8fkjA==}
     peerDependencies:
       '@types/react': ^18.0.21
       react: ^18.2.0

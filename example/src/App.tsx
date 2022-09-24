@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { zen } from "@sidww/zen"
-import { useZen } from "@sidww/zen/dist/react"
+import { useZen } from "@sidww/zen/react"
 
 const state = zen({ count: 0 })
 
