@@ -11,6 +11,18 @@
   "files": [
     "dist"
   ],
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "dist/index.d.ts": [
+        "dist/index.d.ts"
+      ],
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
