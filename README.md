@@ -1,39 +1,70 @@
+# Zen
 
----
+[![npm version](https://badgen.net/npm/v/@sww/zen)](https://npm.im/@sww/zen) [![npm downloads](https://badgen.net/npm/dm/@sidwebworks/get-packages)](https://npm.im/@sidwebworks/get-packages)
 
-# package
-
-[![npm version](https://badgen.net/npm/v/package)](https://npm.im/package) [![npm downloads](https://badgen.net/npm/dm/@sidwebworks/get-packages)](https://npm.im/@sidwebworks/get-packages)
-
-> Get packages from a monorepo (pnpm, yarn, npm, lerna)
+> Dead simple state-management
 
 ## Install
 
 ```bash
-npm i package
+npm i @sww/zen
 ```
 
 ## Usage
 
 ```ts
-import { getPackages } from "package"
+import { zen } from "@sww/zen"
 
-const workspace = await getPackages(".")
-
-// For a monorepo:
-// workspace.type => 'monorepo'
-// workspace.npmClient => 'pnpm' | 'yarn' | 'npm'
-// workspace.root => { data, path }
-// workspace.packages => [{ data, path }]
-
-// For a non-monorepo:
-// workspace.type => 'non-monorepo'
-// workspace.npmClient => 'pnpm' | 'yarn' | 'npm'
-// workspace.package => { data, path }
+const todos = zen([{ id: 1, completed: false, title: "Idk man" }])
 ```
 
-Type docs: https://paka.dev/npm/package
+### Reading from state
 
+```ts
+const value = todos.read()
+```
+
+### Writing to state
+
+```ts
+todos.write([]) // Clear all todos
+
+// Or if the next state depends on previous one
+
+todos.write((prev) => [
+  ...prev,
+  { id: 123, title: "Last one", completed: true },
+])
+
+// U can also directly use the .read() method instead
+```
+
+### Subscribing to changes
+
+```ts
+todos.subscribe((state) => {
+  console.log("CHANGE: ", state)
+})
+```
+
+
+### Usage with React
+
+```ts
+import { useZen } from "@sww/zen/react"
+
+const todos = useZen(todosZen);
+```
+
+#### Selector support
+
+```ts
+import { useZen } from "@sww/zen/react"
+
+const firstTodo = useZen(todosZen, (s) => s[0]);
+```
+
+Type docs: https://paka.dev/npm/@sww/zen
 
 ## License
 

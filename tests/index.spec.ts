@@ -1,6 +1,6 @@
 import { test, assert } from "vitest"
-import { foo } from "../src"
+import { zen } from "../src"
 
-test("simple", () => {
-  assert.equal(foo, "foo")
+test("Zen exists", () => {
+  assert(zen)
 })
