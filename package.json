@@ -14,19 +14,18 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./index.d.ts",
-      "module": "./index.mjs",
-      "import": "./index.mjs",
-      "default": "./index.mjs"
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.mjs",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
     },
     "./react": {
-      "types": "./react.d.ts",
-      "module": "./react.mjs",
-      "import": "./react.mjs",
-      "default": "./react.mjs"
+      "types": "./dist/react.d.ts",
+      "module": "./dist/react.mjs",
+      "import": "./dist/react.mjs",
+      "default": "./dist/react.mjs"
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production tsup --dts-resolve",
     "dev": "NODE_ENV=development tsup --watch",
