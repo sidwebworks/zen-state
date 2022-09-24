@@ -1,8 +1,12 @@
 import { useZen } from "@sidww/zen/react"
-import { ChangeEventHandler } from "react"
+import { ChangeEventHandler, memo } from "react"
 import { state } from "./store"
 
 const uuid = () => Math.floor(Math.random() * 99999)
+
+state.subscribe((data) => {
+  localStorage.setItem("__DEMO_STATE__", JSON.stringify(data))
+})
 
 function App() {
   const title = useZen(state, (s) => s.input)
@@ -42,6 +46,8 @@ function Input() {
     state.write((p) => ({ ...p, input: ev.target.value }))
   }
 
+  console.log("re render input")
+
   return (
     <input
       type="text"
@@ -52,7 +58,7 @@ function Input() {
   )
 }
 
-function TodoList() {
+const TodoList = memo(() => {
   const todos = useZen(state, (s) => s.todos)
 
   const handleToggle = (id: number) => {
@@ -63,7 +69,7 @@ function TodoList() {
   }
 
   const handleDelete = (id: number) => {
-    const updated = todos.filter((todo) => todo.id === id)
+    const updated = todos.filter((todo) => todo.id !== id)
     state.write((p) => ({ ...p, todos: updated }))
   }
 
@@ -97,5 +103,5 @@ function TodoList() {
       ))}
     </ul>
   )
-}
+})
 export default App
