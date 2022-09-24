@@ -34,7 +34,3 @@ const getInitialState = () => {
 }
 
 export const state = zen<{ todos: Todo[]; input: string }>(getInitialState())
-
-state.subscribe((data) => {
-  localStorage.setItem("__DEMO_STATE__", JSON.stringify(data))
-})
